@@ -1,0 +1,27 @@
+services:
+  app:
+    build: .
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+      - redis
+
+  db:
+    image: postgres:17-alpine
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - ./migrations/versions:/docker-entrypoint-initdb.d
+
+  redis:
+    image: redis:8.2-alpine
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

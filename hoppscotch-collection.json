@@ -1,0 +1,241 @@
+{
+  "v": 9,
+  "name": "Game",
+  "folders": [
+    {
+      "v": 9,
+      "name": "Matches",
+      "folders": [],
+      "requests": [
+        {
+          "v": "15",
+          "name": "Play Move",
+          "method": "POST",
+          "endpoint": "<<schema>>://<<host>>:<<port>>/matches/<<match_id>>",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"player_id\": \"<<player_id>>\",\n  \"move\": 2\n}"
+          },
+          "requestVariables": [
+            {
+              "key": "match_id",
+              "value": "54a60e2c-df4a-497a-9feb-b3c3cd4949da",
+              "active": true
+            },
+            {
+              "key": "player_id",
+              "value": "393b3061-8f52-4f19-a6f7-c5c72ea6598a",
+              "active": true
+            }
+          ],
+          "responses": {}
+        },
+        {
+          "v": "15",
+          "name": "Create Match",
+          "method": "POST",
+          "endpoint": "<<schema>>://<<host>>:<<port>>/matches/",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "15",
+          "name": "Get match",
+          "method": "GET",
+          "endpoint": "<<schema>>://<<host>>:<<port>>/matches/<<match_id>>",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [
+            {
+              "key": "match_id",
+              "value": "7e758b30-16fc-4c2e-8051-2a6bfac09c74",
+              "active": true
+            }
+          ],
+          "responses": {}
+        },
+        {
+          "v": "15",
+          "name": "Get leaderboard",
+          "method": "GET",
+          "endpoint": "<<schema>>://<<host>>:<<port>>/matches/<<match_id>>",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [
+            {
+              "key": "match_id",
+              "value": "7e758b30-16fc-4c2e-8051-2a6bfac09c73",
+              "active": true
+            }
+          ],
+          "responses": {}
+        },
+        {
+          "v": "15",
+          "name": "Delete leaderboard",
+          "method": "DELETE",
+          "endpoint": "<<schema>>://<<host>>:<<port>>/matches/leaderboard",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [
+            {
+              "key": "match_id",
+              "value": "7e758b30-16fc-4c2e-8051-2a6bfac09c73",
+              "active": true
+            }
+          ],
+          "responses": {}
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "_ref_id": "coll_me5wka21_c5a2572d-15e7-4c77-8146-34b80504b55e"
+    },
+    {
+      "v": 9,
+      "name": "Matchmaking",
+      "folders": [],
+      "requests": [
+        {
+          "v": "15",
+          "name": "Get ticket status",
+          "method": "GET",
+          "endpoint": "<<schema>>://<<host>>:<<port>>/matchmaking/status/ec15bfda-9db0-4953-afb9-2969bd01d9ef",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"player_id\": \"71e67216-0cc4-499b-a880-504952fadae1\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "15",
+          "name": "Enqueue",
+          "method": "POST",
+          "endpoint": "<<schema>>://<<host>>:<<port>>/matchmaking",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"player_id\": \"ec15bfda-9db0-4953-afb9-2969bd01d9ef\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "_ref_id": "coll_me5wl40e_784dab95-3b1c-4467-bc5a-813143611d0b"
+    },
+    {
+      "v": 9,
+      "name": "Players",
+      "folders": [],
+      "requests": [
+        {
+          "v": "15",
+          "name": "Create Player",
+          "method": "POST",
+          "endpoint": "<<schema>>://<<host>>:<<port>>/players",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"username\": \"Peroo\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "_ref_id": "coll_me5wl9om_0ed34f9d-203c-42a7-add7-91c4ad516907"
+    }
+  ],
+  "requests": [],
+  "headers": [],
+  "auth": {
+    "authType": "none",
+    "authActive": true
+  },
+  "_ref_id": "coll_me5wk0a5_7d860b80-af1a-4e23-9222-f2aac9c4ab6e"
+}
